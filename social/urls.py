@@ -19,6 +19,10 @@ from . import views
 
 urlpatterns = [
     url(r'^admin/', admin.site.urls),
-    url(r'^$', views.IndexPage.as_view(), name='index'),
+    url(r'^$',      views.IndexPage.as_view(), name='index'),
+    url(r'test/',   views.TestLoginPage.as_view(), name='test'),
+    url(r'thanks/', views.TestLogoutPage.as_view(), name='thanks'),
+    url(r'^accounts/', include('accounts.urls'), name='accounts'),
+    url(r'^accounts/', include('django.contrib.auth.urls')),
 
 ]
