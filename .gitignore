@@ -1,2 +1,7 @@
+# ignore folders
+migrations/
+.idea/
+
+
 #ignore files
 *.sqlite3
